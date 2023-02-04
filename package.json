@@ -1,0 +1,37 @@
+{
+  "name": "comp229_assignment1_portfolio",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "engines": {
+    "node": "^18.13.0",
+    "npm": "^6.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "bootstrap": "^5.2.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.6.3",
+    "morgan": "~1.9.1",
+    "popper.js": "^1.16.1"
+  },
+  "description": "demo app for COMP229",
+  "main": "./app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amandayuri/COMP229-W2023-Week3.git"
+  },
+  "author": "Amanda Ike",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amandayuri/COMP229-W2023-Week3/issues"
+  },
+  "homepage": "https://github.com/amandayuri/COMP229-W2023-Week3#readme"
+}

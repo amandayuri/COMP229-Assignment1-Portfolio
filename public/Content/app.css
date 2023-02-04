@@ -1,0 +1,10 @@
+/* custom css goes here */
+
+.circle {
+    height: 35px;
+    width: 50px;
+    background-color: #696969;
+    border-radius: 30%;
+    text-align: center;
+    position: center;
+}
