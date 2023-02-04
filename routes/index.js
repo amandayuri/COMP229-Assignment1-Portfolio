@@ -1,4 +1,4 @@
-var express = require('express');
+var express = require('express'), fs = require('fs'), app = express();
 var router = express.Router();
 
 /* GET home page. */
@@ -29,15 +29,15 @@ router.get('/about', function(req, res, next) {
       p1: 'I was born and raised on Brazil, São Paulo.',
       p2: 'I am an international student on Centennial College. I am currently studying Software Engineering Technology.',
       p3: 'I have experience on Data Engineer field, and I am keen on Data Solutions.',
-      detail_page:''
+      location_info: 'Current living in Toronto, ON.'
     });
 });
 
 /* GET Projects page. */
 router.get('/projects', function(req, res, next) {
   res.render('index', { page_name: 'Projects',
-      title: '',
-      info_page: '',
+      title: 'Projects',
+      info_page: 'Few previous projects done on different companies.',
       detail_page: ''
     });
 });
@@ -45,8 +45,8 @@ router.get('/projects', function(req, res, next) {
 /* GET Services page. */
 router.get('/services', function(req, res, next) {
   res.render('index', { page_name: 'Services' ,
-    title: '',
-    info_page: '',
+    title: 'Services',
+    info_page: 'Offer services using Programming Languages, Tools and Frameworks, and Skills and Techniques:',
     detail_page: ''
   });
 });
