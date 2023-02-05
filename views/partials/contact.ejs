@@ -1,0 +1,35 @@
+<!-- 
+------- HEADER ------------
+Filename: contact.ejs
+Student name: Amanda Yuri Monteiro Ike
+Student ID: 301257019
+Date: February, 2023 
+---------------------------
+-->
+
+<div class="jumbotron">
+    <h4 class="display-4"><%= title %></h4>
+    <p class="lead"> <%= info_page %> </p>
+    <p><%= detail_page %> </p>
+
+    <hr class="my-3">
+
+    <p class=""> Send me a message </p>
+
+    <!-- Form -->
+    <form class="row g-3" action="/">
+        <div >
+            <input type="text" class="form-control" id="contactFullName" name="fFullName" placeholder="Full Name" required>
+        </div>
+        <div >
+            <input type="email" class="form-control" id="contactEmailAdress" name="fEmailAdress" placeholder="Email address name@example.com"required>
+        </div>
+        <div >
+            <textarea class="form-control" id="contactTextMessage" name="fTextMessage" placeholder="Message" rows="3" required></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-info" >Send</button>
+        </div>
+    </form>
+    <!-- Form END-->
+<div class="jumbotron"></div>

@@ -1,4 +1,13 @@
 
+<!-- 
+------- HEADER ------------
+Filename: index.ejs
+Student name: Amanda Yuri Monteiro Ike
+Student ID: 301257019
+Date: February, 2023 
+---------------------------
+-->
+
 <%- include ("./partials/header.ejs") %>
 
 
@@ -30,6 +39,8 @@
       <%- include ("./partials/projects.ejs") %>
   <%} if (page_name == "Services"){ %>
       <%- include ("./partials/services.ejs") %>
+  <%} if (page_name == "Contact"){ %>
+    <%- include ("./partials/contact.ejs") %>
   <% } %>
 
 </main>

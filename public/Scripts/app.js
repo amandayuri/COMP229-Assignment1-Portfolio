@@ -1,3 +1,11 @@
+
+// ------- HEADER ------------
+// Filename: app.ejs
+// Student name: Amanda Yuri Monteiro Ike
+// Student ID: 301257019
+// Date: February, 2023 
+
+
 // IIFE -- Immediately Invoked Function Expression
 (function(){
     function Start(){

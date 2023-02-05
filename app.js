@@ -1,3 +1,8 @@
+// Filename: app.js
+// Student name: Amanda Yuri Monteiro Ike
+// Student ID: 301257019
+// Date: February, 2023
+
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
@@ -15,7 +20,7 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
@@ -37,6 +42,15 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error', { page_name: 'Error'});
+});
+
+app.post('/', function(req,res){
+
+  console.log("=====LOG: Message sent.");
+  console.log("Name: " + req.body.fFullName );
+  console.log("Email address: " + req.body.fEmailAdress );
+  console.log("Message: " + req.body.fTextMessage );
+
 });
 
 module.exports = app;

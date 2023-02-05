@@ -1,3 +1,10 @@
+
+// ------- HEADER ------------
+// Filename: index.js
+// Student name: Amanda Yuri Monteiro Ike
+// Student ID: 301257019
+// Date: February, 2023 
+
 var express = require('express'), fs = require('fs'), app = express();
 var router = express.Router();
 
@@ -54,10 +61,12 @@ router.get('/services', function(req, res, next) {
 /* GET Contact Us page. */
 router.get('/Contact', function(req, res, next) {
   res.render('index', { page_name: 'Contact' ,
-    title: '',
-    info_page: '',
-    detail_page: ''
+    title: 'Contact me',
+    info_page: 'Let is create something together.',
+    detail_page: 'Mail me at amandayuriike@outlook.com'
   });
 });
+
+
 
 module.exports = router;
