@@ -9,7 +9,7 @@ Date: February, 2023
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-    <a class="navbar-brand" href="/"> <div class="circle">AIKE</div> </a>
+    <a class="navbar-brand" href="/"> <img src="Assets/images/ike.jpeg" class="img-fluid rounded-start" alt="Bootstrap" width="30" height="24"> </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,9 +35,9 @@ Date: February, 2023
         
         <li class="nav-item">
           <% if(page_name == "Projects") { %>
-            <a class="nav-link active" href="/projects"> <i class="fas fa-store"></i> Projects </a>
+            <a class="nav-link active" href="/projects"> <i class="fas fa-suitcase"></i> Projects </a>
           <% } else { %>
-            <a class="nav-link " href="/projects"> <i class="fas fa-store"></i> Projects </a>
+            <a class="nav-link " href="/projects"> <i class="fas fa-suitcase"></i> Projects </a>
           <% } %>
         </li>
 
@@ -51,11 +51,36 @@ Date: February, 2023
 
         <li class="nav-item">
           <% if(page_name == "Contact") { %>
-            <a class="nav-link active" href="/contact"><i class="fas fa-address-book"></i> Contact </a>
+            <a class="nav-link active" href="/contact"><i class="fas fa-envelope"></i> Contact Me</a>
           <% } else { %>
-            <a class="nav-link" href="/contact"><i class="fas fa-address-book"></i> Contact </a>
+            <a class="nav-link" href="/contact"><i class="fas fa-envelope"></i> Contact Me</a>
           <% } %>
         </li>
+
+        <li class="nav-item">
+          <% if(page_name == "Business Contact") { %>
+            <a class="nav-link active" href="/contact-list"><i class="fas fa-address-book"></i> Business Contact</a>
+          <% } else { %>
+            <a class="nav-link" href="/contact-list"><i class="fas fa-address-book"></i> Business Contact</a>
+          <% } %>
+        </li>
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text">
+            | <i class="fas fa-sm fa-user"></i>  Welcome, <%= displayName %>
+          </li>
+          <li class="nav-item">
+            <a href="/logout" class="nav-link">
+              <i class="fas fa-sm fa-sign-out-alt"></i> Logout
+            </a>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a href="/login" class="nav-link">
+              <i class="fas fa-sm fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+        <% } %>
       </ul>
     </div>
 </nav>

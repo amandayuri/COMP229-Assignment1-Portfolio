@@ -23,12 +23,12 @@ module.exports.displayContactList = (req, res, next) => {
         {
             console.log(contactlist);
             res.render('contact/list', {
-                page_name: 'Business Contacts', 
+                page_name: 'Business Contact', 
                 ContactList: contactlist, 
                 displayName: req.user ? req.user.displayName : ''
             });
         }
-    });
+    }).sort({name: 1});
 }
 
 module.exports.displayAddPage = (req, res, next) => {

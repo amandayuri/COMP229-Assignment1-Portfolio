@@ -59,7 +59,7 @@ module.exports.displayServicePage = (req, res, next) => {
 
 module.exports.displayContactPage = (req, res, next) => {
     res.render('index', { 
-        page_name: 'Contact' ,
+        page_name: 'Contact Me' ,
         title: 'Contact me',
         info_page: 'Let is create something together.',
         detail_page: 'Mail me at amandayuriike@outlook.com', 
