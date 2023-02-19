@@ -1,3 +1,10 @@
+
+// ------- HEADER ------------
+// Filename: user.js
+// Student name: Amanda Yuri Monteiro Ike
+// Student ID: 301257019
+// Date: February, 2023 
+
 // require modules for the User Model
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');

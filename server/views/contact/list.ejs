@@ -46,6 +46,7 @@ Date: February, 2023
                 <!-- Repeatable template row -->
                 <% for(let count = 0; count < ContactList.length; count++) { %>
                     <tr class="d-flex">
+                        <!-- If user is authorized -->
                         <% if(typeof displayName == 'string' && displayName) { %>
                             <td class="text-center col-4"><%= ContactList[count].name %></td>
                             <td class="text-center col-2"><%= ContactList[count].phonenumber %></td>
