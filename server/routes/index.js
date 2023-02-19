@@ -8,65 +8,39 @@
 var express = require('express'), fs = require('fs'), app = express();
 var router = express.Router();
 
+let indexController = require('../controllers/index');
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', {page_name: 'Home' , 
-    title: 'Welcome to my portfolio', 
-    mission: 'My goal is provide data solutions that positively changes the lives of people worldwide. In addition, I am pursuing lifelong learning as there is always something new to expand my knowledge.',
-    info_page: 'On this portfolio you can find out some projects, resume, and contact information.',
-    detail_page: 'Thank you for visiting my portfolio. For more information, please visit About Me page.'
-  }); // linked to views/index.ejs
-});
+router.get('/', indexController.displayHomePage);
 
 /* GET Home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', {page_name: 'Home', 
-      title: 'Welcome to my portfolio', 
-      mission: 'My goal is provide data solutions that positively changes the lives of people worldwide. In addition, I am pursuing lifelong learning as there is always something new to expand my knowledge.',
-      info_page: 'On this portfolio you can find out some projects, resume, and contact information.',
-      detail_page: 'Thank you for visiting my portfolio. For more information, please visit About Me page.'
-    });
-});
+router.get('/home', indexController.displayHomePage);
 
-/* GET About Us page. */
-router.get('/about', function(req, res, next) {
-  res.render('index', { page_name: 'About',
-      title: 'About Me',
-      info_page: '',
-      p1: 'I was born and raised on Brazil, São Paulo.',
-      p2: 'I am an international student on Centennial College. I am currently studying Software Engineering Technology.',
-      p3: 'I have experience on Data Engineer field, and I am keen on Data Solutions.',
-      location_info: 'Current living in Toronto, ON.'
-    });
-});
+/* GET About page. */
+router.get('/about', indexController.displayAboutPage);
 
 /* GET Projects page. */
-router.get('/projects', function(req, res, next) {
-  res.render('index', { page_name: 'Projects',
-      title: 'Projects',
-      info_page: 'Few previous projects done on different companies.',
-      detail_page: ''
-    });
-});
+router.get('/projects', indexController.displayProjectPage);
 
 /* GET Services page. */
-router.get('/services', function(req, res, next) {
-  res.render('index', { page_name: 'Services' ,
-    title: 'Services',
-    info_page: 'Offer services using Programming Languages, Tools and Frameworks, and Skills and Techniques:',
-    detail_page: ''
-  });
-});
+router.get('/services', indexController.displayServicePage);
 
-/* GET Contact Us page. */
-router.get('/Contact', function(req, res, next) {
-  res.render('index', { page_name: 'Contact' ,
-    title: 'Contact me',
-    info_page: 'Let is create something together.',
-    detail_page: 'Mail me at amandayuriike@outlook.com'
-  });
-});
+/* GET Contact page. */
+router.get('/Contact', indexController.displayContactPage);
 
+// GET Route for displaying Login page
+router.get('/login', indexController.displayLoginPage);
 
+// POST Route for processing Login page 
+router.post('/login', indexController.processLoginPage);
+
+// GET Route for displaying Register page
+router.get('/register', indexController.displayRegisterPage);
+
+// POST Route for processing Register page 
+router.post('/register', indexController.processRegisterPage);
+
+// GET to perform Logout
+router.get('/logout', indexController.performLogout);
 
 module.exports = router;
